@@ -27,5 +27,14 @@ namespace WpfApp1
             MessageBox.Show($"La descrizione inserita è: {this.DescriptionInput.Text}");
         }
 
+        private void Resetbutton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WeldCheckbox.IsChecked = this.RollCheckbox.IsChecked = this.DrillCheckbox.IsChecked = this.FoldCheckbox.IsChecked = this.LatheCheckbox.IsChecked = this.PlasmaCheckbox.IsChecked = this.AssemblyCheckbox.IsChecked = this.LaserCheckbox.IsChecked = false;
+        }
+
+        private void Checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            this.LengthText.Text += ((CheckBox)sender).Content;
+        }
     }
 }
