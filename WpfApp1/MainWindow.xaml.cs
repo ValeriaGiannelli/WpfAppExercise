@@ -36,5 +36,21 @@ namespace WpfApp1
         {
             this.LengthText.Text += ((CheckBox)sender).Content;
         }
+
+        private void FinishDropdown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.NoteText == null)
+                return;
+
+            var combo = (ComboBox)sender;
+            var value = (ComboBoxItem)combo.SelectedValue;
+
+            this.NoteText.Text = (string)value.Content;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            FinishDropdown_SelectionChanged(this.FinishDropdown, null);
+        }
     }
 }
