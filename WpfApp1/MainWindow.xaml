@@ -12,6 +12,8 @@
         
         <!--lo stackpanel prende la grandezza del contenuto-->
         <StackPanel>
+            
+            <!--Top buttons-->
             <Grid>
                 <!--divido questa grid in 3 colonne-->
                 <Grid.ColumnDefinitions>
@@ -29,6 +31,32 @@
 
             </Grid>
 
+            <TextBlock Text="Pulse properties" FontWeight="Bold" Margin="0 10"/>
+            
+            <!--Descrizione-->
+            <TextBlock Text="Description"/>
+            <TextBox Padding="2"/>
+            
+            <!--Status and revision-->
+            <Grid>
+                <Grid.ColumnDefinitions>                    
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Status-->
+                <StackPanel  Grid.Column="0" Margin="0 0 10 0" >
+                    <TextBlock Text="Status"/>
+                    <TextBox Padding="2" IsReadOnly="True" Background="#eee"/>
+                </StackPanel>
+
+                <!--Revision-->
+                <StackPanel  Grid.Column="1">
+                    <TextBlock Text="Revision"/>
+                    <TextBox Padding="2" IsReadOnly="True" Background="#eee"/>
+                </StackPanel>
+            </Grid>
+           
 
         </StackPanel>
     </Border>
