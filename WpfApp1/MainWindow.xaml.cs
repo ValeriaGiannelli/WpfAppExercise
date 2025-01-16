@@ -20,5 +20,12 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        //Funzione che viene svolta al click del button Applay
+        private void ApplayButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"La descrizione inserita è: {this.DescriptionInput.Text}");
+        }
+
     }
 }

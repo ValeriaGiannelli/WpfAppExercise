@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="MainWindow" Height="800" Width="400">
 
 
     <Border Padding="10">
@@ -25,7 +25,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!--spcifico quali sono i contenuti delle colonne sopra-->
-                <Button Margin="0 0 10 0"  Grid.Column="0" Content="Apply" />
+                <Button x:Name="ApplayButton" Click="ApplayButton_Click"  Margin="0 0 10 0"  Grid.Column="0" Content="Apply" />
                 <Button Grid.Column="1" Content="Reset" />
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh" />
 
@@ -37,7 +37,7 @@
             
             <!--Descrizione-->
             <TextBlock Text="Description"/>
-            <TextBox Padding="2"/>
+            <TextBox x:Name="DescriptionInput" Padding="2"/>
             
             <!--Status and revision-->
             <Grid>
@@ -101,6 +101,44 @@
                     <CheckBox Content="Roll"/>
                 </StackPanel>
             </Grid>
+
+
+            <!--Length-->
+            <TextBlock Text="Length" Margin="0 5 0 0"/>
+            <TextBox Padding="2"/>
+
+            <!--Mass-->
+            <TextBlock Text="Mass" Margin="0 5 0 0"/>
+            <TextBox Padding="2" IsReadOnly="True" Background="#eee"/>
+
+            <!--Finish-->
+            <TextBlock Text="Finish" Margin="0 5 0 0"/>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Painted</ComboBoxItem>
+                <ComboBoxItem>Not Painted</ComboBoxItem>
+            </ComboBox>
+            
+            <!--Purchase-->
+            <TextBlock Text="Purchase information" Margin="0 5 0 0"/>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Rubber</ComboBoxItem>
+                <ComboBoxItem>Not Rubber</ComboBoxItem>
+            </ComboBox>
+
+            <!--Supplier Name-->
+            <TextBlock Text="Supplier Name" Margin="0 5 0 0"/>
+            <TextBox Padding="2"/>
+
+            <!--Supplier Code-->
+            <TextBlock Text="Supplier Code" Margin="0 5 0 0"/>
+            <TextBox Padding="2"/>
+
+            <!--SECTION: Additional Info-->
+            <TextBlock Text="Additional Info" FontWeight="Bold" Margin="0 10"/>
+
+            <!--Note-->
+            <TextBlock Text="Note"/>
+            <TextBox Padding="2"/>
 
         </StackPanel>
     </Border>
